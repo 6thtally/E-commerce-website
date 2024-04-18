@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - 6th tally</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+   
+
+    <div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.png" width="125px">
+        </div>
+        <nav>
+            <ul id="MenuItems">
+            <li><a href="#">Home</a></li>    
+            <li><a href="#">Produts</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Account</a></li>
+            </ul>
+        </nav>
+        <img src="cart.png" width="30px" height="30px">
+        <img src="menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+
+    </div>
+
+    <!---- single product details ---->
+
+    <div class="small-container single-product">
+        <div class="row">
+            <div class="col-2">
+                <img src="gallery-1.jpeg" width="100%" id="ProductImg">
+
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="gallery-2.jpeg" class="small-img">
+                    </div>
+
+                    <div class="small-img-col">
+                        <img src="gallery-3.jpeg" class="small-img">
+                    </div>
+
+                    <div class="small-img-col">
+                        <img src="product-1.jpeg" class="small-img">
+                    </div>
+
+                    <div class="small-img-col">
+                        <img src="gallery-1.jpeg" class="small-img">
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-2">
+                <p>Home / Basketball</p>
+                <h1>Nike Men's L.A Lakers LeBron James Dri-Fit Yellow Vest</h1>
+                <h4>R1800.00</h4>
+                <select>
+                    <option>Select Size</option>
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                </select>
+                <input type="number" value="1">
+                <a href="" class="btn">Add To Cart</a>
+                <p>
+                   
+Each team has its own identity. This Lakers jersey, inspired by pro gear, keeps you dry and cool while you represent your favorite player and the game you love, whether on or off the court.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>Related Products</h2>
+            <p>View More</p>
+        </div>
+    </div>
+
+<div class="small-container">
+
+
+    <div class="row">
+        <div class="col-4">
+            <img src="product-1.jpeg">
+            <h4>Nike Men's L.A Lakers LeBron James Dri-Fit Yellow Vest
+            </h4>
+            <p>R1800.00</p>
+        </div>
+
+        <div class="col-4">
+            <img src="product-2.jpeg">
+            <h4>Nike Men's Golden States Warriors Steph Curry Dri-Fit Blue Vest
+            </h4>
+            <p>R1800.00</p>
+        </div>
+
+        <div class="col-4">
+            <img src="product-3.jpeg">
+            <h4>Nike Men's Chicago Bulls Zach Lavine Dri-Fit Black Vest
+            </h4>
+             <p>R1720.00</p>
+        </div>
+
+        <div class="col-4">
+            <img src="produc-4.jpeg">
+            <h4>Nike Men's Brooklyn Nets Ben Simmons Dri-Fit Black Vest
+            </h4>
+            <p>R1650.00</p>
+
+        </div>
+
+</div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and IOS mobile phone.</p>
+                <div class="app-logo">
+                    <img src="play-store.png">
+                    <img src="app-store.png">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="logo-white.png" >
+                <p>Sustaible Sports Kits<br>For Anyone</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return POlicy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">&copy;Copyright 2024 - 6th tally.</p>
+    </div>
+
+</div>
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight ="0px";
+        }
+    }
+</script>
+
+
+<script>
+var SmallImg = document.getElementsByClassName("small-img");
+
+SmallImg[0].onclick = function(){
+    ProductImg.src = SmallImg[0].src;
+}
+
+SmallImg[1].onclick = function(){
+    ProductImg.src = SmallImg[1].src;
+}
+
+SmallImg[2].onclick = function(){
+    ProductImg.src = SmallImg[2].src;
+}
+
+SmallImg[3].onclick = function(){
+    ProductImg.src = SmallImg[3].src;
+}
+</script>
+
+</body>
+
+
+</html>
